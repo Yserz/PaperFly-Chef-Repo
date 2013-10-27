@@ -1,5 +1,5 @@
 paperflyserver Cookbook
-=======================
+==================
 TODO: Enter the cookbook description here.
 
 e.g.
@@ -36,17 +36,17 @@ e.g.
 
 Usage
 -----
-#### paperflyserver::default
+#### wlcserver::default
 TODO: Write usage instructions for each cookbook.
 
 e.g.
-Just include `paperflyserver` in your node's `run_list`:
+Just include `wlcserver` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[paperflyserver]"
+    "recipe[wlcserver]"
   ]
 }
 ```

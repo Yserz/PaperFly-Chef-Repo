@@ -35,8 +35,8 @@ mysql_database_user node['paperflyserver']['database_username'] do
                                 :host => 'localhost', 
                                 :username => 'root', 
                                 :password => node['mysql']['server_root_password']})
-  password                    node['wlcserver']['database_password']
-  database_name               node['wlcserver']['database']
+  password                    node['paperflyserver']['database_password']
+  database_name               node['paperflyserver']['database']
   privileges                  [:select,:update,:insert,:create,:delete]
   action                      :grant
 end
@@ -47,8 +47,8 @@ mysql_database_user node['paperflyserver']['database_username'] do
                                 :host => 'localhost',
                                 :username => 'root',
                                 :password => node['mysql']['server_root_password']})
-  password                    node['wlcserver']['database_password']
-  database_name               node['wlcserver']['test_database']
+  password                    node['paperflyserver']['database_password']
+  database_name               node['paperflyserver']['test_database']
   privileges                  [:select,:update,:insert,:create,:delete]
   action                      :grant
 end

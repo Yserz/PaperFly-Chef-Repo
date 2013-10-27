@@ -1,3 +1,64 @@
+Install instructions
+====================
+
+
+* root@intro:~# `cd ~`
+change to home-dir
+
+* root@intro:~# `curl -L https://www.opscode.com/chef/install.sh | bash`
+install chef-solo
+
+* root@intro:~# `chef-solo -v`
+check chef-solo is correctly installed
+
+* root@intro:~# `apt-get install git`
+install git
+
+* root@intro:~# `git clone https://github.com/Yserz/WLC-Chef-Repo.git`
+get wlc-repo
+
+* root@intro:~# `mv WLC-Chef-Repo chef-repo`
+rename folder
+
+* root@intro:~# `cd chef-repo`
+change dir
+
+* root@intro:~/chef-repo# `echo "cookbook_path [ '/root/chef-repo/cookbooks' ]" > .chef/knife.rb`
+configure knife
+
+* root@intro:~/chef-repo# `nano web.json`
+configure setup
+
+* root@intro:~/chef-repo# `chef-solo -c solo.rb -j web.json`
+run chef-solo
+You are done!
+
+
+Notes:
+======
+
+get chef-repo-template
+* root@intro:~# `wget http://github.com/opscode/chef-repo/tarball/master`
+* root@intro:~# `tar -zxf master`
+* root@intro:~# `mv opscode-chef-repo* chef-repo`
+* root@intro:~# `rm master`
+
+run chef-solo
+* root@intro:~/chef-repo# `chef-solo -c solo.rb -j web.json`
+
+create own cookbook
+* root@intro:~/chef-repo# `knife cookbook create phpapp`
+
+install cookbook from http://community.opscode.com/cookbooks
+* root@intro:~/chef-repo# `knife cookbook site download <cookbook>`
+
+Further Reading
+===============
+
+* HowTo Chef-Solo: `http://gettingstartedwithchef.com/`
+* GlassFish Example: `http://realityforge.org/code/2012/11/12/reusable-cookbooks-revisited.html`
+
+
 Overview
 ========
 
